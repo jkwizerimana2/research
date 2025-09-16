@@ -1,0 +1,11 @@
+﻿Predictor,Comparison (vs Ref),OR,95% CI ,p-value
+Age category,40–60 vs ≤40,0.36,0.25 – 0.52,<0.001
+,60–80 vs ≤40,0.3,0.21 – 0.43,<0.001
+,80+ vs ≤40,0.85,0.57 – 1.29,0.45
+ER status,Positive vs Negative,0.46,0.37 – 0.58,<0.001
+Race,Other vs Black,0.62,0.33 – 1.16,0.138
+,White vs Black,0.43,0.29 – 0.65,<0.001
+Insurance,Other vs Medicaid,1.7,1.30 – 2.21,<0.001
+,Private vs Medicaid,0.79,0.64 – 0.97,0.027
+HER2 status,Positive vs Negative,1.48,1.15 – 1.88,0.002
+PR status,Positive vs Negative,0.53,0.44 – 0.65,<0.001

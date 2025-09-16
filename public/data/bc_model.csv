@@ -1,0 +1,8 @@
+﻿Predictor,Comparison (vs Ref),OR,95% CI ,p-value
+Age category,40–60 vs ≤40,0.35,0.23 – 0.51,<0.001
+,60–80 vs ≤40,0.31,0.21 – 0.46,<0.001
+,80+ vs ≤40,0.89,0.57 – 1.38,0.594
+ER status,Positive vs Negative,0.62,0.45 – 0.86,0.004
+Race,Other vs Black,0.66,0.34 – 1.29,0.224
+,White vs Black,0.43,0.28 – 0.67,<0.001
+PR status,Positive vs Negative,0.72,0.55 – 0.95,0.02
