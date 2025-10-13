@@ -129,7 +129,7 @@ const Button = ({ href, children, variant = "primary", onClick, as = "a" }) => {
 };
 
 const Section = ({ id, title, subtitle, children }) => (
-  <section id={id} className="py-16 sm:py-24">
+  <section id={id} className="py-6 sm:py-10">
     <div className="mx-auto max-w-6xl px-4">
       {title && (
         <div className="mb-8">
@@ -582,56 +582,39 @@ function HomeContent() {
         </div>
       </Section>
 
-      {/* RECENT */}
-      <Section title="Research Areas" subtitle="Let's work together in these domains">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {RECENT.map((p) => (
-            <Card key={p.title}>
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-                  <p className="mt-1 text-sm text-slate-300">{p.desc}</p>
+{/* RECENT */}
+        <Section title="Research Areas" subtitle="Let's work together in these domains">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {RECENT.map((p) => (
+              <Card key={p.title}>
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">{p.title}</h3>
+                    <p className="mt-1 text-sm text-slate-300">{p.desc}</p>
+                  </div>
+                  {p.year && (
+                    <span className="inline-flex items-center gap-2 text-xs text-slate-300">
+                      <CalendarDays size={14}/> {p.year}
+                    </span>
+                  )}
                 </div>
-                {p.year && (
-                  <span className="inline-flex items-center gap-2 text-xs text-slate-300">
-                    <CalendarDays size={14}/> {p.year}
-                  </span>
-                )}
-              </div>
 
-              <ul className="mt-4 space-y-1.5 text-sm text-slate-300 list-disc pl-5">
-                {p.bullets.map((b) => <li key={b}>{b}</li>)}
-              </ul>
+                <ul className="mt-4 space-y-1.5 text-sm text-slate-300 list-disc pl-5">
+                  {p.bullets.map((b) => <li key={b}>{b}</li>)}
+                </ul>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                {p.tags.map((t) => <Pill key={t}>{t}</Pill>)}
-              </div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.tags.map((t) => <Pill key={t}>{t}</Pill>)}
+                </div>
+                {/* Links removed */}
+              </Card>
+            ))}
+          </div>
+        </Section>
 
-              <div className="mt-5 flex gap-3">
-                {p.links.map((l) =>
-                  l.href.startsWith("/") ? (
-                    <Button key={l.label} as="link" href={l.href} variant="ghost">
-                      {l.label} <ArrowRight size={14}/>
-                    </Button>
-                  ) : (
-                    <a
-                      key={l.label}
-                      href={l.href}
-                      className="inline-flex items-center gap-1.5 text-sm text-indigo-300 hover:text-indigo-200"
-                      target="_blank" rel="noopener noreferrer"
-                    >
-                      {l.label} <ExternalLink size={14}/>
-                    </a>
-                  )
-                )}
-              </div>
-            </Card>
-          ))}
-        </div>
-      </Section>
 
       {/* EXPERIENCE */}
-      <Section id="experience" title="Experience" subtitle="What I've been up to">
+      <Section id="experience" title="Experience" subtitle="What I have been up to:">
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
@@ -719,11 +702,6 @@ function HomeContent() {
           ))}
         </div>
       </Section>
-
-      <Section id="chatbot" title="Ask Hope" subtitle="Ask my agent Hope about my background and projects using RAG, or switch to Ollama model.">
-        <Chatbot />
-      </Section>
-
       {/* CONTACT / FOOTER */}
       <Section id="contact" title="Contact">
         <div className="flex flex-wrap items-center gap-3">
