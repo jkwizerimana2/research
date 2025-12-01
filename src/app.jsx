@@ -163,7 +163,7 @@ const FIGS = {
 const PROFILE = {
   name: "Jean D'Amour Kwizerimana",
   title: "Biostatistician & ML Enthusiast",
-  blurb: "I build statistically rigorous, production-ready analytics and ML for public health, oncology, and internal medicine.",
+  blurb: "I build statistically rigorous and production-ready analytics.",
   cv_url: "/Resume.pdf",
   links: {
     github: "https://github.com/jkwizerimana2",
@@ -205,7 +205,7 @@ const FEATURED = [
     bullets: [
       "Multi-center ICU dataset (130k+ admissions, first 24h data, 8–10% mortality)",
       "Baseline & weighted L1-logistic; threshold tuning for F2/recall",
-      "XGBoost with hyperparameter search, class weighting (scale_pos_weight)",
+      "XGBoost with hyperparameter search, class weighting",
       "Imputation (mean/mode), scaling, one-hot encoding, collinearity checks",
       "Evaluation: AUROC, PR curve, AP; cost-based and SHAP-based explainability",
     ],
@@ -235,7 +235,7 @@ const RECENT = [
     desc: "Designing robust and interpretable models using classic statistical methods.",
     bullets: [
       "Descriptive stats, hypothesis testing, power/sample size calculation",
-      "Linear/logistic/Poisson/Cox, mixed effects & GEE, survival analysis",
+      "Linear/Logistic/Poisson, mixed effects & GEE, survival analysis",
       "Predictive modeling & causal inference (propensity scores, IPTW, MSM)",
     ],
     tags: ["R", "SAS", "STATA", "SPSS", "Python"],
@@ -249,7 +249,7 @@ const RECENT = [
       "Program evaluation and policy",
       "Community health needs assessments",
     ],
-    tags: ["Tableau", "Power BI", "GIS", "Shiny"],
+    tags: ["Tableau", "RedCap", "GIS", " SAS & R"],
     links: [{ label: "Brief", href: "#" }, { label: "Shiny", href: "#" }],
   },
   {
@@ -257,7 +257,7 @@ const RECENT = [
     desc: "Building and deploying ML models for classification, regression, and clustering.",
     bullets: [
       "Data preprocessing, feature engineering, model training/tuning",
-      "Evaluation (CV, metrics, calibration); interpretation (SHAP, LIME, PDP, ICE)",
+      "Evaluation (CV, metrics, calibration); interpretation (SHAP)",
       "Deployment (APIs, dashboards, web apps)",
     ],
     tags: ["Python", "PyTorch", "Tensorflow/Keras"],
@@ -528,7 +528,7 @@ function HomeContent() {
               </div>
               <div className="rounded-2xl bg-white/5 p-4">
                 <div className="text-3xl font-extrabold text-white">ML & AI</div>
-                <div className="text-sm text-slate-300">RAG LLM CNN LR SVM ...</div>
+                <div className="text-sm text-slate-300">Staying abreast of statistical advancements</div>
               </div>
               <div className="rounded-2xl bg-white/5 p-4">
                 <div className="text-3xl font-extrabold text-white">3+&nbsp;Years</div>
@@ -562,7 +562,7 @@ function HomeContent() {
               <div className="mt-5 flex gap-3">
                 {p.links.map((l) =>
                   l.href.startsWith("/") ? (
-                    <Button key={l.label} as="link" href={l.href} variant="ghost">
+                    <Button key={l.label} as="link" href={l.href} variant="primary">
                       {l.label} <ArrowRight size={14}/>
                     </Button>
                   ) : (
@@ -633,9 +633,10 @@ function HomeContent() {
               time: "Jan 2024 – May 2025",
               items: [
                 "Data cleaning, linkage, and visualization",
-                "ATV fatality analytics from death certificates",
+                "ATV fatality analytics — Death certificate data",
                 "Shiny dashboards & reproducible reporting",
-                "Cancer surveillance (bladder, lung); NPDS poison surveillance",
+                "Cancer surveillance (bladder, lung) — Cancer registry data",
+                "Poison exposure surveillance — NPDS data"
               ],
             },
                         {
@@ -706,8 +707,8 @@ function HomeContent() {
       <Section id="contact" title="Contact">
         <div className="flex flex-wrap items-center gap-3">
           <Button href={PROFILE.links.email}><Mail size={16}/> Email</Button>
-          <Button href={PROFILE.links.linkedin} variant="ghost"><Linkedin size={16}/> LinkedIn</Button>
-          <Button href={PROFILE.links.github} variant="ghost"><Github size={16}/> GitHub</Button>
+          <Button href={PROFILE.links.linkedin} variant="primary"><Linkedin size={16}/> LinkedIn</Button>
+          <Button href={PROFILE.links.github} variant="primary"><Github size={16}/> GitHub</Button>
         </div>
       </Section>
     </>
@@ -1065,7 +1066,7 @@ function FactorAnalysisPage() {
 
           <h3 className="pt-2 font-semibold text-slate-100">Psychosocial Factors</h3>
           <p>
-            The factor analysis yielded three factors, which we labeled Hassles/Stress, Support, and Distress. These three factors had eigenvalues > 1 and together explained a majority of the variance in the nine items. Table 1 presents the rotated factor loadings for each item. The Hassles/Stress factor had high loadings for feeling stressed by being busy (loading = 0.998) and by life changes (0.480). The Support factor was defined by strong positive loadings for social support network size (0.458), feeling understood (0.709), and ability to share problems (0.724). The Distress factor showed high loadings for physical abuse (0.536), feeling sad or lonely (0.444), feeling unwanted (0.350), and fearing a family member (0.483). Each item loaded most strongly on one primary factor, and cross-loadings were low (all secondary loadings less than 0.30 in absolute value).
+            The factor analysis yielded three factors, which we labeled Hassles/Stress, Support, and Distress. These three factors had eigenvalues &gt; 1 and together explained a majority of the variance in the nine items. Table 1 presents the rotated factor loadings for each item. The Hassles/Stress factor had high loadings for feeling stressed by being busy (loading = 0.998) and by life changes (0.480). The Support factor was defined by strong positive loadings for social support network size (0.458), feeling understood (0.709), and ability to share problems (0.724). The Distress factor showed high loadings for physical abuse (0.536), feeling sad or lonely (0.444), feeling unwanted (0.350), and fearing a family member (0.483). Each item loaded most strongly on one primary factor, and cross-loadings were low (all secondary loadings less than 0.30 in absolute value).
           </p>
 
           <div className="overflow-x-auto rounded-xl border border-white/10 mt-4">
